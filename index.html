@@ -52,5 +52,33 @@ function outFunc() {
 }
 </script>
 
+<input type="text" value="" id="myInput" class="w3-input w3-border w3-left w3-margin-right w3-mobile" style="width:auto">
+<span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+<script>
+
+function myFunction() {
+var copyText = document.getElementById("myInput");
+copyText.select();
+copyText.setSelectionRange(0, 99999);
+document.execCommand('copy');
+var tooltip = document.getElementById("myTooltip");
+tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function myFunctionORIGINAL() {
+var copyText = document.getElementById("myInput");
+copyText.select();
+document.execCommand("Copy");
+var tooltip = document.getElementById("myTooltip");
+tooltip.innerHTML = "Copied: " + copyText.value;
+}
+
+function outFunc() {
+var tooltip = document.getElementById("myTooltip");
+tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
+
+
 </body>
 </html>
