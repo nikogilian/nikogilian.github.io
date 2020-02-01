@@ -255,7 +255,9 @@ tooltip.innerHTML = "Copy to clipboard";
 Click me to see the time.</button>
 
 <p id="demo">Fri Jan 31 2020 21:25:34 GMT-0800 (Pacific Standard Time)</p>
-<button onclick="document.getElementById('file-input').click();">Open file</button>
+<form action="/action_page.php">
+  <input type="file" name="pic" accept="image/*">
+</form>
 <input id="file-input" type="file" name="name" style="display: none;">
 
     <p>check box's</p>
@@ -266,6 +268,7 @@ Click me to see the time.</button>
     <textarea id="textarea" rows="3" style="margin: 10px; height: 15px; width: 15px; color: white; background: rgb(0, 0, 0);"></textarea>                                              <div>
 
 </div>
+
 
 
 
