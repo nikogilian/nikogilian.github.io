@@ -298,14 +298,9 @@ Click me to see the time.</button>
                             <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone="" style="display: none;">
                                 
                             </div>
-                            <div class="buttons">
-                                <div class="qq-upload-button-selector qq-upload-button" style="position: relative; overflow: hidden; direction: ltr;">
-                                    <div>Select files (click text)</div>
-                                <input qq-button-id="cd00bdfa-832f-4940-a743-62d758ac28e4" title="file input" multiple="" type="file" name="qqfile" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0; height: 100%;"></div>
-                                <button type="button" id="trigger-upload" class="btn btn-primary">
-                                    <i class="icon-upload icon-white"></i> Upload
-                                </button>
-                            </div>
+                            <form action="/action_page.php">
+  <input type="file" id="myFile" name="filename">
+</form>
                             <span class="qq-drop-processing-selector qq-drop-processing qq-hide">
                                 <span></span>
                                 <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
@@ -408,6 +403,7 @@ Click me to see the time.</button>
     <textarea id="textarea" rows="3" style="margin: 10px; height: 15px; width: 15px; color: white; background: rgb(0, 0, 0);"></textarea>                                              <div>
 
 </div>
+
 
 
 
