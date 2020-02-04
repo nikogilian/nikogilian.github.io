@@ -77,18 +77,17 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
-    
-    #trigger-upload {
-                            color: white;
-                            background-color: #00ABC7;
-                            font-size: 14px;
-                            padding: 7px 20px;
-                            background-image: none;
-                        }
+#trigger-upload {
+color: white;
+background-color: #00ABC7;
+font-size: 14px;
+padding: 7px 20px;
+background-image: none;
+}
 
-                        #fine-uploader-manual-trigger .qq-upload-button {
-                            margin-right: 15px;
-                        }
+    #fine-uploader-manual-trigger .qq-upload-button {
+margin-right: 15px;
+                       }
 
                         #fine-uploader-manual-trigger .buttons {
                             width: 36%;
@@ -291,30 +290,7 @@ function outFunc() {
   <span class="tooltiptext" id="myTooltip">Copy to </span>
  clipboard
   </button>
-<script>
 
-function myFunction() {
-var copyText = document.getElementById("myInput");
-copyText.select();
-copyText.setSelectionRange(0, 99999);
-document.execCommand('copy');
-var tooltip = document.getElementById("myTooltip");
-tooltip.innerHTML = "Copied: " + copyText.value;
-}
-
-function myFunctionORIGINAL() {
-var copyText = document.getElementById("myInput");
-copyText.select();
-document.execCommand("Copy");
-var tooltip = document.getElementById("myTooltip");
-tooltip.innerHTML = "Copied: " + copyText.value;
-}
-
-function outFunc() {
-var tooltip = document.getElementById("myTooltip");
-tooltip.innerHTML = "Copy to clipboard";
-}
-</script>
 <br>
 <br>
 <button type="button" onclick="document.getElementById('demo').innerHTML = Date()">
@@ -436,41 +412,31 @@ Click me to see the time.</button>
 
 </div>
 
+<!-- <scripts> go at bottom -->
+ <script>
 
+function myFunction() {
+var copyText = document.getElementById("myInput");
+copyText.select();
+copyText.setSelectionRange(0, 99999);
+document.execCommand('copy');
+var tooltip = document.getElementById("myTooltip");
+tooltip.innerHTML = "Copied: " + copyText.value;
+}
 
+function myFunctionORIGINAL() {
+var copyText = document.getElementById("myInput");
+copyText.select();
+document.execCommand("Copy");
+var tooltip = document.getElementById("myTooltip");
+tooltip.innerHTML = "Copied: " + copyText.value;
+}
 
+function outFunc() {
+var tooltip = document.getElementById("myTooltip");
+tooltip.innerHTML = "Copy to clipboard";
+}
+</script>
+</body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body></html>
+</html>
