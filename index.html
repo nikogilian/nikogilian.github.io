@@ -114,7 +114,7 @@ margin-right: 15px;
 
 </head><body><div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London')">About</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Links</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Links and more</button>
     <button class="tablinks" onclick="openCity(event, 'Paris')">Code button</button>
 </div>
 
@@ -134,6 +134,33 @@ This is a workbox so you can play around with the tools around you!</div>
  
  </div> <div id="Tokyo" class="tabcontent" style="display: none;"> <p><a href="https://nikogilian.github.io/day-button-press/">Other website</a></p>
     <p><a href="https://www.w3schools.com/html/">Learn code</a></p>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<button onclick="myFunction()">view</button>
+
+<div id="myDIV">
+ 
+</div>
+more
+<p> to this website then what you see right away!</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
  </div> <script> function openCity(evt, cityName) { var i, tabcontent, tablinks; tabcontent = document.getElementsByClassName("tabcontent"); for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; } tablinks = document.getElementsByClassName("tablinks"); for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); } document.getElementById(cityName).style.display = "block"; evt.currentTarget.className += " active"; } </script>
 
 
@@ -452,6 +479,7 @@ var tooltip = document.getElementById("myTooltip");
 tooltip.innerHTML = "Copy to clipboard";
 }
 </script>
+
 
 
 
