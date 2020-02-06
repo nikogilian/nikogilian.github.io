@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+    .btn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {background: #eee;}
+
+.success {color: green;}
+.info {color: dodgerblue;}
+.warning {color: orange;}
+.danger {color: red;}
+.default {color: black;}
+
     p:hover {
   background-color: yellow;
 }
@@ -420,10 +437,20 @@ Click me to see the time.</button>
 <input id="file-input" type="file" name="name" style="display: none;">
 
 
-    <input type="checkbox" name="fruit" value="Apple">
+    <p> check boxes </p>
+<input type="checkbox" name="fruit" value="Apple">
 <input type="checkbox" name="fruit" value="Orange">
 <input type="checkbox" name="fruit" value="Banana">
-    <p> stretch box </p>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+<button class="btn default">Default</button>
+
     <textarea id="textarea" rows="3" style="margin: 10px; height: 15px; width: 15px; color: white; background: rgb(0, 0, 0);"></textarea>                                              <div>
 
 </div>
@@ -459,6 +486,7 @@ var tooltip = document.getElementById("myTooltip");
 tooltip.innerHTML = "Copy to clipboard";
 }
 </script>
+
 
 
 
