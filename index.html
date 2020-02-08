@@ -1,5 +1,18 @@
 <html><head>
 <title>WorkBox</title>
+    <script>
+        GroupID = 2987620 --Dont change that, its already set to the Group
+RequiredRank = 254 --Keep the same (254 means Admin/Owner)
+
+game.Players.ChildAdded:connect(function(plr)
+	local Rank = plr:GetRankInGroup(GroupID)
+	if plr:IsInGroup(GroupID) then
+		if Rank >= RequiredRank then
+			--Script to execute if player is Admin/Owner here!
+		end
+	end
+end) 
+    </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -483,6 +496,7 @@ var tooltip = document.getElementById("myTooltip");
 tooltip.innerHTML = "Copy to clipboard";
 }
 </script>
+
 
 
 
