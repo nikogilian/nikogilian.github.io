@@ -518,6 +518,27 @@ Click me to see the time.<img src="https://cdn2.iconfinder.com/data/icons/ios-7-
 </form>
 
     <textarea id="textarea" rows="3" style="margin: 10px; height: 15px; width: 15px; color: white; background: rgb(0, 0, 0);"></textarea>                                              <div>
+    
+    <form name="calculator">
+<input type="button" value="1" onclick="document.calculator.ans.value+='1'">
+<input type="button" value="2" onclick="document.calculator.ans.value+='2'">
+<input type="button" value="3" onclick="document.calculator.ans.value+='3'"><br>
+<input type="button" value="4" onclick="document.calculator.ans.value+='4'">
+<input type="button" value="5" onclick="document.calculator.ans.value+='5'">
+<input type="button" value="6" onclick="document.calculator.ans.value+='6'">
+<input type="button" value="7" onclick="document.calculator.ans.value+='7'"><br>
+<input type="button" value="8" onclick="document.calculator.ans.value+='8'">
+<input type="button" value="9" onclick="document.calculator.ans.value+='9'">
+<input type="button" value="-" onclick="document.calculator.ans.value+='-'">
+<input type="button" value="+" onclick="document.calculator.ans.value+='+'"><br>
+<input type="button" value="*" onclick="document.calculator.ans.value+='*'">
+<input type="button" value="/" onclick="document.calculator.ans.value+='/'">
+
+<input type="button" value="0" onclick="document.calculator.ans.value+='0'">
+<input type="reset" value="Reset">
+<input type="button" value="=" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+<br>Solution is <input type="textfield" name="ans" value="">
+</form>
 
 </div>
 <iframe name="result" allow="midi *; geolocation *; microphone *; camera *; encrypted-media *;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" allowfullscreen="" allowpaymentrequest="" frameborder="0" src="//fiddle.jshell.net/gtpqzhac/show/">
@@ -557,6 +578,7 @@ function pauseAudio() {
   x.pause();
 } 
 </script>
+
 
 
 
