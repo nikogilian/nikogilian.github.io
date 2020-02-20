@@ -14,7 +14,6 @@ $subject = "Form Tutorial";
 $name_field = $_POST['name'];
 $email_field = $_POST['email'];
 $message = $_POST['message'];
-$phone_field = $_POST['phone'];
 
 $body = "From: $name_field\n E-Mail: $email_field\n Phone: $phone_field\n Message:\n $message";
 
