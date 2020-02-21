@@ -21,6 +21,28 @@ end)
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+    
+    .irc_mi {
+    border-radius: 25px;
+  background: #ffffff;
+  padding: 20px; 
+  width: 50px;
+  height: 50px; 
+}
+    
+    .rounded-corners {
+        
+        border-radius: 25px;
+  background: #ffffff;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;  
+}
+    
+    body {
+    background-image: url(http://www.tonygil.com/2011/images/bg-tile.png);
+}
+    
     h1:hover {
     color: white;
 }
@@ -552,7 +574,7 @@ Click me to see the time.<img src="https://cdn2.iconfinder.com/data/icons/ios-7-
 </form>
 
 </div>
-<iframe name="result" allow="midi *; geolocation *; microphone *; camera *; encrypted-media *;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" allowfullscreen="" allowpaymentrequest="" frameborder="0" src="//fiddle.jshell.net/gtpqzhac/show/">
+<iframe class="rounded-corners" name="result" allow="midi *; geolocation *; microphone *; camera *; encrypted-media *;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" allowfullscreen="" allowpaymentrequest="" frameborder="0" src="//fiddle.jshell.net/gtpqzhac/show/">
         </iframe>
 <!-- <scripts> go at bottom -->
  <script>
@@ -589,6 +611,7 @@ function pauseAudio() {
   x.pause();
 } 
 </script>
+
 
 
 
