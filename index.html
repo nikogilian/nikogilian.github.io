@@ -256,7 +256,7 @@ margin-right: 15px;
 
   <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London')">About</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Links, creator and more</button>
+  <button class="tablinks active" onclick="openCity(event, 'Tokyo')">Links, creator and more</button>
     <button class="tablinks" onclick="openCity(event, 'Paris')">Code button</button>
 </div>
 
@@ -284,18 +284,12 @@ This is a workbox so you can play around with the tools around you!</div>
   <h3>code button</h3>
     <button type="button" onclick="alert('Hello world!')">Test</button>
 
- </div> <div id="Tokyo" class="tabcontent" style="display: none;"> <button id="" <="" button="">
-<a href="https://nikogilian.github.io/daytime/" class="button">Other website</a>
+ </div> <div id="Tokyo" class="tabcontent" style="display: block;"> <a href="https://nikogilian.github.io/daytime/" class="button">Other website</a>
 
     <p><a href="https://www.w3schools.com/html/">Learn code</a></p><p> the creator is named niko gil is 8 years old here is how i look!</p>
 
     <img src="IMG_3680.JPG" alt="Me" width="128" height="171">
-    <table>
-  <tbody><tr>
-    <td>Owner is niko gil</td>
-    <td>admin is tony gil</td>
-  </tr>
-</tbody></table><embed src="helloworld.swf">
+    <embed src="helloworld.swf">
     
     <!--Button-->
 <center>
@@ -316,9 +310,7 @@ This is a workbox so you can play around with the tools around you!</div>
      </td>
    </tr>
  </tbody></table>
-</center>
-
- </button></div> <script> function openCity(evt, cityName) { var i, tabcontent, tablinks; tabcontent = document.getElementsByClassName("tabcontent"); for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; } tablinks = document.getElementsByClassName("tablinks"); for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); } document.getElementById(cityName).style.display = "block"; evt.currentTarget.className += " active"; } </script>
+</center></div> <script> function openCity(evt, cityName) { var i, tabcontent, tablinks; tabcontent = document.getElementsByClassName("tabcontent"); for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; } tablinks = document.getElementsByClassName("tablinks"); for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); } document.getElementById(cityName).style.display = "block"; evt.currentTarget.className += " active"; } </script>
 
 
 <div id="Tokyo" class="tabcontent" style="display: none;">
@@ -684,6 +676,7 @@ function pauseAudio() {
 } 
 </script>
     </center>
+
 
 
 
