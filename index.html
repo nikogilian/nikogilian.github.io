@@ -21,6 +21,27 @@ end)
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+    /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+    
+    
     h1 {
         position: fixed;
 }
@@ -263,8 +284,8 @@ margin-right: 15px;
         <br><br>
         <br>
   <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">About</button>
-  <button class="tablinks active" onclick="openCity(event, 'Tokyo')">Links, creator and more</button>
+  <button class="tablinks active" onclick="openCity(event, 'London')">About</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Links, creator and more</button>
     <button class="tablinks" onclick="openCity(event, 'Paris')">Code button</button>
 </div>
 
@@ -273,7 +294,8 @@ margin-right: 15px;
 
 
 
-<div class="div1"><strong> About </strong>
+<div class="div1"><div style="border-style: solid;
+  border-color: black;"><strong> About </strong></div>
 This is a workbox so you can play around with the tools around you!</div>
 
 </div>
@@ -696,6 +718,7 @@ function pauseAudio() {
 } 
 </script>
     </center>
+
 
 
 
