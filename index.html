@@ -22,6 +22,19 @@ end)
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+    .none {
+  display: none;
+}
+
+.main {
+  margin-top: 50px;
+}
+
+.error {
+  border: 2px solid red;
+}
+    
+    
     * {
   box-sizing: border-box;
   margin: 0;
@@ -1283,75 +1296,152 @@ function pauseAudio() {
 } 
 </script>
     <!-- hitwebcounter Code START -->
-CSS JSResult
-<div class="comments-app" ng-app="commentsApp" ng-controller="CommentsController as cmntCtrl">
-  <h1>Comments App - AngularJS</h1>
-  
-  <!-- From -->
-  <div class="comment-form">
-    <!-- Comment Avatar -->
-    <div class="comment-avatar">
-      
+<img src="https://hitwebcounter.com/counter/counter.php?page=7203105&amp;style=0006&amp;nbdigits=5&amp;type=page&amp;initCount=0" title="User Stats" alt="webcounterwebsite" border="0">
+<div class="main container">
+
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand">Firebase Commenter</a>
+      </div>
     </div>
-
-    <form class="form" name="form" ng-submit="form.$valid &amp;&amp; cmntCtrl.addComment()" novalidate="">
-      <div class="form-row">
-        <textarea class="input" ng-model="cmntCtrl.comment.text" placeholder="Add comment..." required=""></textarea>
-      </div>
-
-      <div class="form-row">
-        <input class="input" ng-class="{ disabled: cmntCtrl.comment.anonymous }" ng-disabled="cmntCtrl.comment.anonymous" ng-model="cmntCtrl.comment.author" ng-required="!cmntCtrl.comment.anonymous" placeholder="Email" type="email">
-      </div>
-
-      <div class="form-row text-right">
-        <input id="comment-anonymous" ng-change="cmntCtrl.anonymousChanged()" ng-model="cmntCtrl.comment.anonymous" type="checkbox">
-        <label for="comment-anonymous">Anonymous</label>
-      </div>
-
-      <div class="form-row">
-        <input type="submit" value="Add Comment">
-      </div>
-    </form>
   </div>
 
-  <!-- Comments List -->
-  <div class="comments">
-    <!-- Comment -->
-    <div class="comment" ng-repeat="comment in cmntCtrl.comments | orderBy: '-date'">
-      <!-- Comment Avatar -->
-      <div class="comment-avatar">
-        <img ng-src="{{ comment.avatarSrc }}">
-      </div>
+  <div class="main row">
 
-      <!-- Comment Box -->
-      <div class="comment-box">
-        <div class="comment-text">{{ comment.text }}</div>
-        <div class="comment-footer">
-          <div class="comment-info">
-            <span class="comment-author">
-              <em ng-if="comment.anonymous">Anonymous</em>
-              <a ng-if="!comment.anonymous" href="{{ comment.author }}">{{ comment.author }}</a>
-            </span>
-            <span class="comment-date">{{ comment.date | date: 'medium' }}</span>
-          </div>
-
-          <div class="comment-actions">
-            <a href="#">Reply</a>
-          </div>
-        </div>
+   <div class="col-lg-4">
+     <!-- FORM -->
+     <div class="row">
+      <div class="well bs-component">
+        <form class="form-horizontal">
+          <fieldset>
+            <legend>Leave a comment</legend>
+            <div class="form-group">
+              <div class="col-lg-11">
+                <input type="text" class="form-control" id="nameInput" placeholder="Your name">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-11">
+                <textarea class="form-control" id="messageInput" placeholder="Your message"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-11">
+                <select id="subjectInput" class="form-control" placeholder="Subject">
+                  <option value="-1" disabled="" selected="">Select a subject</option>
+                  <option value="success">Well done!</option>
+                  <option value="danger">Ups!</option>
+                  <option value="warning">Warning</option>
+                  <option value="info">Info</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-10 col-lg-offset-2">
+                <button class="btn btn-default">Cancel</button>
+                <button id="btnSubmit" class="btn btn-primary">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
       </div>
     </div>
+  </div>
+      <script>
+         var firebaseURL = 'https://luminous-torcxh-4257.firebaseio.com';
+var myDataRef = new Firebase(firebaseURL);
+var messageTemplate = '<div class="alert alert-dismissable alert-{0} none" data-name="{3}"><button type="button" class="close btnRemove" data-dismiss="alert">×</button><b>{1}</b>: {2}</div>';
 
-    <!-- Comment - Dummy -->
-    <div class="comment">
-      <!-- Comment Avatar -->
-      <div class="comment-avatar">
-        <img src="http://gravatar.com/avatar/412c0b0ec99008245d902e6ed0b264ee?s=80">
-      </div>
+$(document).ready(function() {
+  
+  $('#messageInput').keypress(function(e) {
+    if (e.keyCode == 13) sendComment();
+  });
+  
+  $('.form-control').on('change', function(){
+    if ($(this).val()) $(this).removeClass('error');
+    else $(this).addClass('error');
+  })
 
+  $('#btnSubmit').click(function() {
+    sendComment();
+    return false;
+  });
+
+  $('#messagesDiv').on('click', '.btnRemove', function() {
+    var $parent = $(this).parent();
+    var rmObject = new Firebase(firebaseURL + '/' + $parent.data('name'));
+
+    rmObject.remove();
+    rmObject = null;
+  });
+
+  myDataRef.on('child_added', function(snapshot) {
+    var message = snapshot.val();
+    displayChatMessage((message.subject || 'info'), message.name, message.text, snapshot.name());
+  });
+  
+  function displayChatMessage(subject, name, text, id) {
+  	var comment = $(messageTemplate.format(subject, name, text, id)); 
+  	$('#messagesDiv').append(comment);
+  	comment.show('slow');
+  
+  	$('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+	}
+
+  function sendComment() {
+    $('.error').removeClass('error');
+    
+    var $name = $('#nameInput'),
+    $text = $('#messageInput'),
+    $subject = $('#subjectInput');
+    
+    if (!$subject.val() || !$name.val() || !$text.val()) {
+      if (!$text.val()) $text.addClass('error');
+      if (!$name.val()) $name.addClass('error');
+      if (!$subject.val()) $subject.addClass('error');
       
-<p>website visits</p></div></div></div>
-<img src="https://hitwebcounter.com/counter/counter.php?page=7203105&amp;style=0006&amp;nbdigits=5&amp;type=page&amp;initCount=0" title="User Stats" alt="webcounterwebsite" border="0">
+      return false;
+    }
+
+    myDataRef.push({
+      name: $name.val(),
+      text: $text.val(),
+      subject: $subject.val()
+    });
+
+    $('#messageInput').val('');
+    $('#subjectInput option:eq(0)').prop('selected', true);
+  }
+  
+  function validateForm() {}
+  
+});
+
+
+String.prototype.format = function() {
+  var args = arguments;
+  return this.replace(/{(\d+)}/g, function(match, number) {
+    return typeof args[number] != 'undefined' ? args[number] : match;
+  });
+};
+ 
+      </script>
+
+  <div class="col-lg-8">
+    <!-- MESSAGES -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="messagesDiv"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
 <br>
                                     
                                     
@@ -1364,6 +1454,7 @@ CSS JSResult
 
 <h6>© copyright 2019-2020 nglicser.squad</h6>
     </center>
+
 
 
 
