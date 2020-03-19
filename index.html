@@ -683,656 +683,89 @@ end)
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-<center>
-        <button onclick="document.getElementById('sighnin').style.display='block'" style="width:auto;">Login</button>
 
 
 
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
 
 
-<div id="sighnin" class="modal">
-
-<form>
-    <div class="controls">
-    <div id="new document">
-    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script><style type="text/css">.as-console-wrapper { position: fixed; bottom: 0; left: 0; right: 0; max-height: 150px; overflow-y: scroll; overflow-x: hidden; border-top: 1px solid #000; display: none; }
-.as-console { background: #e9e9e9; border: 1px solid #ccc; display: table; width: 100%; border-collapse: collapse; }
-.as-console-row { display: table-row; font-family: monospace; font-size: 13px; }
-.as-console-row:after { display: table-cell; padding: 3px 6px; color: rgba(0,0,0,.35); border: 1px solid #ccc; content: attr(data-date); vertical-align: top; }
-.as-console-row + .as-console-row > * { border: 1px solid #ccc; }
-.as-console-row-code { width: 100%; white-space: pre-wrap; padding: 3px 5px; display: table-cell; font-family: monospace; font-size: 13px; vertical-align: middle; }
-.as-console-error:before { content: 'Error: '; color: #f00; }
-.as-console-assert:before { content: 'Assertion failed: '; color: #f00; }
-.as-console-info:before { content: 'Info: '; color: #00f; }
-.as-console-warning:before { content: 'Warning: '; color: #e90 }
-@-webkit-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
-@-moz-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
-@-ms-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
-@keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
-.as-console-row-code, .as-console-row:after { -webkit-animation: flash 1s; -moz-animation: flash 1s; -ms-animation: flash 1s; animation: flash 1s; }</style>
 
 
-    <input type="username" placeholder="Create username" id="pwd" class="masked" name="password">
-<input type="password" placeholder="Create ID" id="pwd" class="masked" name="password">
-
-    <script type="text/javascript">
-        function show() {
-  var p = document.getElementById('pwd');
-  p.setAttribute('type', 'text');
-}
-
-function hide() {
-  var p = document.getElementById('pwd');
-  p.setAttribute('type', 'password');
-}
-
-function showHide() {
-  var pwShown = 0;
-
-  document.getElementById("eye").addEventListener("click", function() {
-    if (pwShown == 0) {
-      pwShown = 1;
-      show();
-    } else {
-      pwShow = 0;
-      hide();
-    }
-  }, false);
-}
-    </script>
-
-<div class="as-console-wrapper"><div class="as-console"></div></div>
-
-        <input type="reset" value="Reset">
-        <input type="submit" value="Submit">
-    </div>
-
-    </div>
-</form>
-
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-    <h1>WorkBox</h1>
 
 
-        <br>
-        <br><br>
-        <br>
-  <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">About</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Links, creator and movie!</button>
-    <button class="tablinks" onclick="openCity(event, 'Paris')">Code button</button>
-</div>
-<div class="navbar">
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <p>www.tonygil.com/nv/</p>
-      <p>www.tonygil.com</p><label for="birthday">Time:</label>
-  <input type="date" id="birthday" name="birthday">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+<div class="w3-container">
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
+
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">×</span>
+        <p>More coming soon!</p>
+      </div>
     </div>
   </div>
 </div>
-
-
-
-<div id="London" class="tabcontent" style="display: none;">
-
-
-
-
-<details>
-  <summary><acronym title="About the page">About</acronym></summary>
-  <p>This is a workbox so you can play around with the tools around you!</p>
-</details>
-
-
-
-</div>
-
-<audio id="myAudio">
-  <source src="audio/ui-sounds.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-
-
-
-
-
-<div id="Paris" class="tabcontent" style="display: none;">
-  <h3>code button</h3>
-    <button type="button" onclick="alert('Hello world!')">Test</button>
-
- </div> <div id="Tokyo" class="tabcontent" style="display: none;"> <li><a href="https://nikogilian.github.io/daytime/" class="button">Other website</a></li>
-
-    <li> <a href="https://www.w3schools.com/html/">Learn all code</a></li><p> the creator is named niko gil is 8 years old here is how i look!</p>
-
-    <img src="IMG_3680.JPG" alt="Me" width="128" height="171">
-    <embed src="helloworld.swf">
-
-    <!--Button-->
-<center>
- <table align="center" cellspacing="0" cellpadding="0" width="100%">
-   <tbody><tr>
-     <td align="center" style="padding: 10px;">
-       <table border="0" class="mobile-button" cellspacing="0" cellpadding="0">
-         <tbody><tr>
-           <td align="center" bgcolor="#2b3138" style="background-color: #2b3138; margin: auto; max-width: 600px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 15px 20px; " width="100%">
-           <!--[if mso]>&nbsp;<![endif]-->
-               <a href="#" target="_blank" style="16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-weight:normal; text-align:center; background-color: #2b3138; text-decoration: none; border: none; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; display: inline-block;">
-                   <span style="font-size: 16px; font-family: Helvetica, Arial, sans-serif; color: #ffffff; font-weight:normal; line-height:1.5em; text-align:center;">Click Here</span>
-             </a>
-           <!--[if mso]>&nbsp;<![endif]-->
-           </td>
-         </tr>
-       </tbody></table>
-     </td>
-   </tr>
- </tbody></table>
-    <iframe width="466" height="204" src="https://www.youtube.com/embed/BNHISIcoOCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-    <object width="400" height="400" data="https://thumbs.gfycat.com/DamagedImportantAmurratsnake-size_restricted.gif">
-</object>
-</center></div> <script> function openCity(evt, cityName) { var i, tabcontent, tablinks; tabcontent = document.getElementsByClassName("tabcontent"); for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; } tablinks = document.getElementsByClassName("tablinks"); for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); } document.getElementById(cityName).style.display = "block"; evt.currentTarget.className += " active"; } </script>
-
-
-<div id="Tokyo" class="tabcontent" style="display: none;">
-  <h3>other</h3>
- <button type="button" onclick="alert('button')">click</button>
-</div>
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-
-
-
-
-
-
-<div id="London" class="tabcontent" style="display: none;">
-  <h3>About</h3>
-  <p>This is a workbox so you can play around with the tools around you!</p>
-</div>
-
-<div id="Paris" class="tabcontent" style="display: none;">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Tokyo" class="tabcontent" style="display: none;">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-
-
-<table>
-  <tbody><tr>
-    <th>Website type</th>
-
-  </tr>
-  <tr>
-    <td>WorkBox</td>
-
-</tr></tbody></table>
-    <link rel="stylesheet" type="text/css" href="bootstrap.bundle.js">
-
-    <img class="irc_mi" title="initials" src="https://thesoundofenglish.org/wp-content/uploads/2015/05/ng-fb.jpeg" alt="Image result for NG" width="70" height="70" style="">
-
-
-
-
-
-
-
-
-
-
-
-<input type="Text" size="20" value="" name="text1" maxlength="15">
-
-
-<form>
-<input type="Text">
-<p>
-<input type="Submit" value="refresh page" style="
-    color: white;
-    background: black;
-                                                 background-color: #black;
-border: none;
-border-radius: 15px;
-box-shadow: 0 9px #999;
-box-shadow: 0 5px #666;
-transform: translateY(4px);
-background-color: #black;
-border: none;
-border-radius: 15px;
-box-shadow: 0 9px #999;
-box-shadow: 0 5px #666;
-transform: translateY(4px);
-">
-</p></form><form>
-
-<input type="Text" placeholder="submiter" size="25" value="" <input="">
-<br>
-<iframe width="20" height="20" src="https://www.youtube.com/embed/OOOm7jZicEg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></form><meta name="viewport" content="width=device-width, initial-scale=1">
-        <script>
-            (function(){
-  'use strict';
-
-  angular
-    .module('commentsApp', [])
-    .controller('CommentsController', CommentsController);
-
-  // Inject $scope dependency.
-  CommentsController.$inject = ['$scope'];
-
-  // Declare CommentsController.
-  function CommentsController($scope) {
-    var vm = this;
-
-    // Current comment.
-    vm.comment = {};
-
-    // Array where comments will be.
-    vm.comments = [];
-
-    // Fires when form is submited.
-    vm.addComment = function() {
-      // Fixed img.
-      vm.comment.avatarSrc = 'http://lorempixel.com/200/200/people/';
-
-      // Add current date to the comment.
-      vm.comment.date = Date.now();
-
-      vm.comments.push( vm.comment );
-      vm.comment = {};
-
-      // Reset clases of the form after submit.
-      $scope.form.$setPristine();
-    }
-
-    // Fires when the comment change the anonymous state.
-    vm.anonymousChanged = function(){
-      if(vm.comment.anonymous)
-        vm.comment.author = "";
-    }
-  }
-
-})();
-        </script>
-
-
-
-<br>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="U8W45GRTWHG9U">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-<p> Donate to me if you want better websites because it will help me code! </p>
-    <button onclick="window.location.href = 'https://www.youtube.com/channel/UC9KQfykCatV5T86jxVV5jBQ';" style="
-    color: 255,0,0;
-    box-shadow: inset 0 0 0px 20px #0000;
-">my youtube<img src="https://s.ytimg.com/yts/img/favicon-vfl8qSV2F.ico"></button>
-
-<br><br> <p></p>
-<input type="text" value="nikothekidgil@gmail.com" id="myInput" class="w3-input w3-border w3-left w3-margin-right w3-mobile" style="width:auto">
-<button onclick="myFunction()" onmouseout="outFunc()" class="w3-button w3-border w3-light-grey w3-left w3-mobile">
-    <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-copy-outline-32.png">
-  <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
- to email me
-  </button>
-  <script>
-    <br>
-    </br>
-<p> Donate to me so i can code better and make better websites </p>
-
-function myFunction() {
-  var copyText = document.getElementById("myInput");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  document.execCommand('copy');
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied: " + copyText.value;
-}
-
-function myFunctionORIGINAL() {
-  var copyText = document.getElementById("myInput");
-  copyText.select();
-  document.execCommand("Copy");
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copied: " + copyText.value;
-}
-
-function outFunc() {
-  var tooltip = document.getElementById("myTooltip");
-  tooltip.innerHTML = "Copy to clipboard";
-}
-</script>
-<br>
-<br>
-
-<input type="text" value="" id="myInput" class="w3-input w3-border w3-left w3-margin-right w3-mobile" style="width:auto">
-
-<button onclick="myFunction()" onmouseout="outFunc()" class="w3-button w3-border w3-light-grey w3-left w3-mobile">
-  <span class="tooltiptext" id="myTooltip">Copy to </span>
- clipboard
-  </button>
-
-<br><button><a href="mailto:nikothekidgil@gmail.com?subject=Guest">Email me</a></button>
-
-<br><br>
-
-<button type="button" onclick="document.getElementById('demo').innerHTML = Date()" style="size:;">
-Click me to see the time.<img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/clock-32.png"></button>
-
-<p id="demo"></p>
-
-
-    <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="Drop files here">
-                            <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container qq-hide">
-                                <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
-                            </div>
-                            <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone="" style="display: none;">
-
-                            </div>
-                            <form action="/action_page.php">
-  <input type="file" id="myFile" name="filename"><img src="https://cdn4.iconfinder.com/data/icons/common-toolbar/36/Open-32.png">
-</form>
-                            <span class="qq-drop-processing-selector qq-drop-processing qq-hide">
-                                <span></span>
-                                <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
-                            </span>
-                            <ul class="qq-upload-list-selector qq-upload-list" aria-live="polite" aria-relevant="additions removals"></ul>
-
-                            <dialog class="qq-alert-dialog-selector">
-                                <div class="qq-dialog-message-selector"></div>
-                                <div class="qq-dialog-buttons">
-                                    <button type="button" class="qq-cancel-button-selector">Close</button>
-                                </div>
-                            </dialog>
-
-                            <dialog class="qq-confirm-dialog-selector">
-                                <div class="qq-dialog-message-selector"></div>
-                                <div class="qq-dialog-buttons">
-                                    <button type="button" class="qq-cancel-button-selector">No</button>
-                                    <button type="button" class="qq-ok-button-selector">Yes</button>
-                                </div>
-                            </dialog>
-
-                            <dialog class="qq-prompt-dialog-selector">
-                                <div class="qq-dialog-message-selector"></div>
-                                <input type="text">
-                                <div class="qq-dialog-buttons">
-                                    <button type="button" class="qq-cancel-button-selector">Cancel</button>
-                                    <button type="button" class="qq-ok-button-selector">Ok</button>
-                                </div>
-                            </dialog>
-                        </div>
-    <script type="text/template" id="qq-template-manual-trigger">
-                        <div class="qq-uploader-selector qq-uploader" qq-drop-area-text="">
-                            <div class="qq-total-progress-bar-container-selector qq-total-progress-bar-container">
-                                <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-total-progress-bar-selector qq-progress-bar qq-total-progress-bar"></div>
-                            </div>
-                            <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
-                                <span class="qq-upload-drop-area-text-selector"></span>
-                            </div>
-                            <div class="buttons">
-                                <div class="qq-upload-button-selector qq-upload-button">
-                                    <div>Select files</div>
-                                </div>
-                                <button type="button" id="trigger-upload" class="btn btn-primary">
-                                    <i class="icon-upload icon-white"></i> Upload
-                                </button>
-                            </div>
-                            <span class="qq-drop-processing-selector qq-drop-processing">
-                                <span>Processing dropped files...</span>
-                                <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
-                            </span>
-                            <ul class="qq-upload-list-selector qq-upload-list" aria-live="polite" aria-relevant="additions removals">
-                                <li>
-                                    <div class="qq-progress-bar-container-selector">
-                                        <div role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" class="qq-progress-bar-selector qq-progress-bar"></div>
-                                    </div>
-                                    <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
-                                    <img class="qq-thumbnail-selector" qq-max-size="100" qq-server-scale>
-                                    <span class="qq-upload-file-selector qq-upload-file"></span>
-                                    <span class="qq-edit-filename-icon-selector qq-edit-filename-icon" aria-label="Edit filename"></span>
-                                    <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
-                                    <span class="qq-upload-size-selector qq-upload-size"></span>
-                                    <button type="button" class="qq-btn qq-upload-cancel-selector qq-upload-cancel">Cancel</button>
-                                    <button type="button" class="qq-btn qq-upload-retry-selector qq-upload-retry">Retry</button>
-                                    <button type="button" class="qq-btn qq-upload-delete-selector qq-upload-delete">Delete</button>
-                                    <span role="status" class="qq-upload-status-text-selector qq-upload-status-text"></span>
-                                </li>
-                            </ul>
-
-                            <dialog class="qq-alert-dialog-selector">
-                                <div class="qq-dialog-message-selector"></div>
-                                <div class="qq-dialog-buttons">
-                                    <button type="button" class="qq-cancel-button-selector">Close</button>
-                                </div>
-                            </dialog>
-
-                            <dialog class="qq-confirm-dialog-selector">
-                                <div class="qq-dialog-message-selector"></div>
-                                <div class="qq-dialog-buttons">
-                                    <button type="button" class="qq-cancel-button-selector">No</button>
-                                    <button type="button" class="qq-ok-button-selector">Yes</button>
-                                </div>
-                            </dialog>
-
-                            <dialog class="qq-prompt-dialog-selector">
-                                <div class="qq-dialog-message-selector"></div>
-                                <input type="text">
-                                <div class="qq-dialog-buttons">
-                                    <button type="button" class="qq-cancel-button-selector">Cancel</button>
-                                    <button type="button" class="qq-ok-button-selector">Ok</button>
-                                </div>
-                            </dialog>
-                        </div></script>
-<input id="file-input" type="file" name="name" style="display: none;">
-
-
-
-<input type="checkbox" name="fruit" value="Apple">
-<input type="checkbox" name="fruit" value="Orange">
-<input type="checkbox" name="fruit" value="Banana"><br>
-<label></label>
-<p>animation area</p> <input type="radio" name="gender" id="male" value="male">
-<br>
-<label></label>
-
-<input type="radio" name="gender" id="male" value="male">
-<br><input type="radio" name="gender" id="male" value="male">
-<p>end of animations radio buttons</p>
-<input type="color"><br>
-
-<label></label>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-
-
-
-<form action="" autocomplete="on">
-  E-mail: <input type="email" name="email" autocomplete="off"><br>
-  <input type="submit">
-</form>
-
-    <textarea onkeypress="alert('Add')" id="textarea" rows="3" style="margin: 10px; height: 40px; width: 60px; color: white; background: rgb(0, 0, 0);"></textarea>                                              <div style="background-color:black">
-  <b style="color:white">calculator</b>
-</div>
-
-<div>
-
-    <form name="calculator">
-<input type="button" value="1" onclick="document.calculator.ans.value+='1'">
-<input type="button" value="2" onclick="document.calculator.ans.value+='2'">
-<input type="button" value="3" onclick="document.calculator.ans.value+='3'"><br>
-<input type="button" value="4" onclick="document.calculator.ans.value+='4'">
-<input type="button" value="5" onclick="document.calculator.ans.value+='5'">
-<input type="button" value="6" onclick="document.calculator.ans.value+='6'">
-<input type="button" value="7" onclick="document.calculator.ans.value+='7'"><br>
-<input type="button" value="8" onclick="document.calculator.ans.value+='8'">
-<input type="button" value="9" onclick="document.calculator.ans.value+='9'">
-<input type="button" value="-" onclick="document.calculator.ans.value+='-'">
-<input type="button" value="+" onclick="document.calculator.ans.value+='+'"><br>
-<input type="button" value="*" onclick="document.calculator.ans.value+='*'">
-<input type="button" value="/" onclick="document.calculator.ans.value+='/'">
-
-<input type="button" value="0" onclick="document.calculator.ans.value+='0'">
-<input type="reset" value="Reset">
-<input type="button" value="=" onclick="document.calculator.ans.value=eval(document.calculator.ans.value)">
-<br>Solution is <input type="textfield" name="ans" value="">
-</form>
-
-</div>
-<div class="w3-col m6">
-
-
-
-<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
-<input type="range" id="a" value="50">100
-+<input type="number" id="b" value="50">
-=<output name="x" for="a b"></output>
-</form>
-<br>
-    <hr>
-
-    <b>Why do you use this website?</b>
-<br>
-<select>
-  <option value="0">Select</option>
-  <option value="1">help for work</option>
-  <option value="2">get code</option>
-  <option value="3">math</option>
-  <option value="4">other</option>
-</select>
-<br>
-<br>
-
-
-
-<iframe class="rounded-corners" name="result" allow="midi *; geolocation *; microphone *; camera *; encrypted-media *;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" allowfullscreen="" allowpaymentrequest="" frameborder="0" src="//fiddle.jshell.net/gtpqzhac/show/">
-        </iframe></div>
-<!-- <scripts> go at bottom -->
- <script>
-
-function myFunction() {
-var copyText = document.getElementById("myInput");
-copyText.select();
-copyText.setSelectionRange(0, 99999);
-document.execCommand('copy');
-var tooltip = document.getElementById("myTooltip");
-tooltip.innerHTML = "Copied: " + copyText.value;
-}
-
-function myFunctionORIGINAL() {
-var copyText = document.getElementById("myInput");
-copyText.select();
-document.execCommand("Copy");
-var tooltip = document.getElementById("myTooltip");
-tooltip.innerHTML = "Copied: " + copyText.value;
-}
-
-function outFunc() {
-var tooltip = document.getElementById("myTooltip");
-tooltip.innerHTML = "Copy to clipboard";
-}
-
-var x = document.getElementById("myAudio");
-
-function playAudio() {
-  x.play();
-}
-
-function pauseAudio() {
-  x.pause();
-}
-</script>
-    <!-- hitwebcounter Code START -->
-<img src="https://hitwebcounter.com/counter/counter.php?page=7203105&amp;style=0006&amp;nbdigits=5&amp;type=page&amp;initCount=0" title="User Stats" alt="webcounterwebsite" border="0"><!-- HTML Codes by Quackit.com-->
-<style type="text/css">
-textarea.html-text-box {background-color:#ffffff;background-image:url(http://);background-repeat:no-repeat;background-attachment:fixed;border-width:1;border-style:solid;border-color:#cccccc;font-family:Arial;font-size:14pt;color:#000000;}
-input.html-text-box {background-color:#ffffff;font-family:Arial;font-size:14pt;color:#000000;}
-</style>
-
-<p></p>
 <iframe name="f121974d35fa8" width="1000px" height="100px" title="fb:comments Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.0/plugins/comments.php?app_id=252546858126957&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D46%23cb%3Df3736063b8dcfe%26domain%3Dwww.powtoon.com%26origin%3Dhttps%253A%252F%252Fwww.powtoon.com%252Ff3f690c2e304ea%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=690&amp;height=100&amp;href=https%3A%2F%2Fwww.powtoon.com%2Fblog%2Fcreate-your-own-animation-the-best-animated-video-maker%2F&amp;locale=en_US&amp;numposts=5&amp;sdk=joey&amp;version=v2.0" style="border: none; visibility: visible; width: 100%; height: 720px;" class=""></iframe>
 
-<br>
-<div class="w3-container">
-  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
-
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">×</span>
-        <p>More coming soon!</p>
-      </div>
-    </div>
-  </div>
-</div>
-
 
 
 
@@ -1343,95 +776,6 @@ input.html-text-box {background-color:#ffffff;font-family:Arial;font-size:14pt;c
 <h6>© copyright 2019-2020 nglicser.squad</h6>
     </center>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-<div class="w3-container">
-  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
-
-  <div id="id01" class="w3-modal">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">×</span>
-        <p>More coming soon!</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-        <h1>The button disabled attribute</h1>
-
-<button style="hover:none;" type="button" disabled="">Admin button only (Disabled for non-admins)</button>
-
-<h6>© copyright 2019-2020 nglicser.squad</h6>
-    </center>
 
 
 
