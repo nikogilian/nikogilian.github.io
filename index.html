@@ -123,7 +123,7 @@ window.onclick = function(event) {
         <br>
   <div class="tab">
   <button class="tablinks" onclick="openCity(event, 'London')">About</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Links, creator and movie!</button>
+  <button class="tablinks active" onclick="openCity(event, 'Tokyo')">Links, creator and movie!</button>
     <button class="tablinks" onclick="openCity(event, 'Paris')">Code button</button>
 </div>
 <div class="navbar">
@@ -170,7 +170,7 @@ window.onclick = function(event) {
   <h3>code button</h3>
     <button type="button" onclick="alert('Hello world!')">Test</button>
 
- </div> <div id="Tokyo" class="tabcontent" style="display: none;"> <li><a href="https://nikogilian.github.io/daytime/" class="button">Other website</a></li>
+ </div> <div id="Tokyo" class="tabcontent" style="display: block;"> <li><a href="https://nikogilian.github.io/daytime/" class="button">Other website</a></li>
 
     <li> <a href="https://www.w3schools.com/html/">Learn all code</a></li><p> the creator is named niko gil is 8 years old here is how i look!</p>
 
@@ -199,6 +199,9 @@ window.onclick = function(event) {
     <iframe width="466" height="204" src="https://www.youtube.com/embed/BNHISIcoOCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
     <object width="400" height="400" data="https://thumbs.gfycat.com/DamagedImportantAmurratsnake-size_restricted.gif">
 </object>
+    <a href="Downloadable/reload.html" download="">
+  <button>work in progress</button>
+</a>
 </center></div> <script> function openCity(evt, cityName) { var i, tabcontent, tablinks; tabcontent = document.getElementsByClassName("tabcontent"); for (i = 0; i < tabcontent.length; i++) { tabcontent[i].style.display = "none"; } tablinks = document.getElementsByClassName("tablinks"); for (i = 0; i < tablinks.length; i++) { tablinks[i].className = tablinks[i].className.replace(" active", ""); } document.getElementById(cityName).style.display = "block"; evt.currentTarget.className += " active"; } </script>
 
 
@@ -775,6 +778,7 @@ end)
 
 <h6>© copyright 2019-2020 nglicser.squad</h6>
     </center>
+
 
 
 
