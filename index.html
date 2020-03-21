@@ -23,32 +23,6 @@ end)
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        a {
-  padding-left: 5px;
-}
-
-.disabled {
-  color: orange;
-}
-
-
-/* some simple transitions to make the upvote and downvote
-buttons fade in as a visual cue for the user */
-
-.glyphicon {
-  opacity: 1;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out;
-}
-
-.glyphicon:hover {
-  opacity: 0.75;
-  cursor: pointer;
-}
-
-    </style>
 </head><body>
 <center>
         <button onclick="document.getElementById('sighnin').style.display='block'" style="width:auto;">Login</button>
@@ -642,7 +616,53 @@ Click me to see the time.<img src="https://cdn2.iconfinder.com/data/icons/ios-7-
 
 
 <iframe class="rounded-corners" name="result" allow="midi *; geolocation *; microphone *; camera *; encrypted-media *;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" allowfullscreen="" allowpaymentrequest="" frameborder="0" src="//fiddle.jshell.net/gtpqzhac/show/">
-        </iframe></div>
+        </iframe>
+<div class="container">
+	<!-- time to add the controls -->
+	<input id="start" name="controls" type="radio">
+	<input id="stop" name="controls" type="radio">
+	<input id="reset" name="controls" type="radio">
+	<div class="timer">
+		<div class="cell">
+			<div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell">
+			<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell divider"><div class="numbers">:</div></div>
+		<div class="cell">
+			<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
+		</div>
+		<div class="cell">
+			<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell divider"><div class="numbers">:</div></div>
+		<div class="cell">
+			<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
+		</div>
+		<div class="cell">
+			<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell divider"><div class="numbers">:</div></div>
+		<div class="cell">
+			<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell">
+			<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+		<div class="cell">
+			<div class="numbers hundredmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
+		</div>
+	</div>
+	<!-- Lables for the controls -->
+	<div id="timer_controls">
+		<label for="start">Start</label>
+		<label for="stop">Stop</label>
+		<label for="reset">Reset</label>
+	</div>
+</div>
+<div><a target="_blank" href="https://htmlbestcodes.com/"><span style="font-size: 8pt; text-decoration: none">HTML Best Codes</span></a></div>
+</div>
 <!-- <scripts> go at bottom -->
  <script>
 
@@ -896,6 +916,7 @@ var vm = new Vue({
 
 <h6>© copyright 2019-2020 nglicser.squad</h6>
     </center>
+
 
 
 
