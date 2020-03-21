@@ -617,49 +617,224 @@ Click me to see the time.<img src="https://cdn2.iconfinder.com/data/icons/ios-7-
 
 <iframe class="rounded-corners" name="result" allow="midi *; geolocation *; microphone *; camera *; encrypted-media *;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" allowfullscreen="" allowpaymentrequest="" frameborder="0" src="//fiddle.jshell.net/gtpqzhac/show/">
         </iframe>
-<div class="container">
-	<!-- time to add the controls -->
-	<input id="start" name="controls" type="radio">
-	<input id="stop" name="controls" type="radio">
-	<input id="reset" name="controls" type="radio">
-	<div class="timer">
-		<div class="cell">
-			<div class="numbers tenhour moveten">0 1 2 3 4 5 6 7 8 9</div>
-		</div>
-		<div class="cell">
-			<div class="numbers hour moveten">0 1 2 3 4 5 6 7 8 9</div>
-		</div>
-		<div class="cell divider"><div class="numbers">:</div></div>
-		<div class="cell">
-			<div class="numbers tenminute movesix">0 1 2 3 4 5 6</div>
-		</div>
-		<div class="cell">
-			<div class="numbers minute moveten">0 1 2 3 4 5 6 7 8 9</div>
-		</div>
-		<div class="cell divider"><div class="numbers">:</div></div>
-		<div class="cell">
-			<div class="numbers tensecond movesix">0 1 2 3 4 5 6</div>
-		</div>
-		<div class="cell">
-			<div class="numbers second moveten">0 1 2 3 4 5 6 7 8 9</div>
-		</div>
-		<div class="cell divider"><div class="numbers">:</div></div>
-		<div class="cell">
-			<div class="numbers milisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-		</div>
-		<div class="cell">
-			<div class="numbers tenmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-		</div>
-		<div class="cell">
-			<div class="numbers hundredmilisecond moveten">0 1 2 3 4 5 6 7 8 9</div>
-		</div>
-	</div>
-	<!-- Lables for the controls -->
-	<div id="timer_controls">
-		<label for="start">Start</label>
-		<label for="stop">Stop</label>
-		<label for="reset">Reset</label>
-	</div>
+<div id="result-iframe-wrap" role="main">
+<iframe id="result" srcdoc="
+<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+
+  <meta charset=&quot;UTF-8&quot;>
+  
+<link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+<meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+
+<link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+
+<link rel=&quot;mask-icon&quot; type=&quot;&quot; href=&quot;https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg&quot; color=&quot;#111&quot; />
+
+
+  <title>CodePen - stopwatch</title>
+  
+  
+  
+  
+  
+<style>
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(81, 90, 148, 1) 0%,
+    rgba(70, 78, 130, 1) 29%,
+    rgba(43, 52, 102, 1) 49%,
+    rgba(1, 33, 33, 1) 100%
+  );
+  text-align: center;
+  font-family: &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif;
+  color: white;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#stopWatch {
+  display: block;
+  width: 500px;
+  height: 200px;
+  background-color: #1a1e3b;
+  box-shadow: 0 0 10px #bfc0e9;
+  border-radius: 30px;
+  padding: 30px 0;
+}
+.time {
+  width: 80%;
+  background-color: #000;
+  border: 1px solid #bfc0e9;
+  border-radius: 10px;
+  margin: auto;
+  padding: 30px 0;
+  font-size: 36px;
+  font-style: italic;
+  color: #e1d4ff;
+}
+.buttons-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  padding: 0;
+}
+.buttons-list li {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 130px;
+  margin: 0 5px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+.start {
+  background-color: #1a818e;
+}
+.stop {
+  background-color: #b1201f;
+}
+.reset {
+  background-color: #015214;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage(&quot;resize&quot;, &quot;*&quot;);
+  }
+</script>
+
+
+</head>
+
+<body translate=&quot;no&quot; >
+  <div class=&quot;wrapper&quot;>
+  <div id=&quot;stopWatch&quot;>
+    <div class=&quot;time&quot; id=&quot;time&quot;>00:00:00</div>
+    <ul class=&quot;buttons-list&quot;>
+      <li class=&quot;start&quot; id=&quot;start&quot;>START</li>
+      <li class=&quot;stop&quot; id=&quot;stop&quot;>STOP</li>
+      <li class=&quot;reset&quot; id=&quot;reset&quot;>RESET</li>
+    </ul>
+  </div>
+</div>
+    <script src=&quot;https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js&quot;></script>
+
+  
+  
+      <script id=&quot;rendered-js&quot; >
+function Main() {
+  this.initialize();
+}
+
+Main.prototype.initialize = function () {
+  this.time = document.getElementById(&quot;time&quot;);
+  this.start = document.getElementById(&quot;start&quot;);
+  this.stop = document.getElementById(&quot;stop&quot;);
+  this.reset = document.getElementById(&quot;reset&quot;);
+  this.timerId = null;
+  this.startTime = 0;
+  this.progress = 0;
+  this.playingFlg = false;
+  this.milliseconds = 0;
+  this.handleEvents();
+};
+
+Main.prototype.handleEvents = function () {
+  let self = this;
+
+  this.start.addEventListener(&quot;click&quot;, function (e) {
+    e.preventDefault();
+    if (!self.playingFlg) {
+      self.timerStart();
+      self.playingFlg = true;
+    }
+  });
+
+  this.stop.addEventListener(&quot;click&quot;, function (e) {
+    e.preventDefault();
+    if (self.playingFlg) {
+      clearInterval(self.timerId);
+      self.playingFlg = false;
+    }
+  });
+
+  this.reset.addEventListener(&quot;click&quot;, function (e) {
+    e.preventDefault();
+    clearInterval(self.timerId);
+    self.timerId = null;
+    self.startTime = 0;
+    self.progress = 0;
+    self.playingFlg = false;
+    self.milliseconds = 0;
+    self.time.innerHTML = &quot;00:00:00&quot;;
+  });
+};
+
+Main.prototype.timerStart = function () {
+  let self = this;
+  self.timerId = setInterval(function () {
+    self.milliseconds += 1;
+    self.time.innerHTML = self.timeDisplay();
+  }, 10);
+};
+
+Main.prototype.timeDisplay = function () {
+  let self = this;
+  let ms,
+  s,
+  m = 0;
+  let currentMilliseconds = self.milliseconds;
+
+  ms = Math.floor(currentMilliseconds / 1 % 100);
+  s = Math.floor(currentMilliseconds / 100 % 60);
+  m = Math.floor(currentMilliseconds / (100 * 60) % 60);
+
+  ms = ms < 10 ? &quot;0&quot; + ms : ms;
+  m = m < 10 ? &quot;0&quot; + m : m;
+  s = s < 10 ? &quot;0&quot; + s : s;
+
+  return m + &quot;:&quot; + s + &quot;:&quot; + ms;
+};
+
+let main = new Main();
+//# sourceURL=pen.js
+    </script>
+
+  
+  
+
+</body>
+
+</html>
+ 
+" sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-presentation allow-same-origin allow-scripts" allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr" allowtransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
 </div>
 <div><a target="_blank" href="https://htmlbestcodes.com/"><span style="font-size: 8pt; text-decoration: none">HTML Best Codes</span></a></div>
 </div>
@@ -801,8 +976,7 @@ end)
 
 
 <br>
-<div class="w3-container">
-  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
+<button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
 <iframe name="result" allow="midi *; geolocation *; microphone *; camera *; encrypted-media *;" sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation" allowfullscreen="" allowpaymentrequest="" frameborder="0" src="//fiddle.jshell.net/jah1s8v7/2/show/">
         </iframe>
 
@@ -814,7 +988,7 @@ end)
       </div>
     </div>
   </div>
-</div>
+
 
 <div id="app">
   <div class="container-fluid">
@@ -916,6 +1090,7 @@ var vm = new Vue({
 
 <h6>© copyright 2019-2020 nglicser.squad</h6>
     </center>
+
 
 
 
